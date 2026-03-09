@@ -576,7 +576,7 @@
     <div class="nav-controls">
       <button class="nav-ctrl-btn siren-btn on" id="sirenBtn" onclick="toggleSiren()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-        Siren Active
+        <span id="sirenLabel">Siren Active</span>
       </button>
       <button class="nav-ctrl-btn roadblock-btn" onclick="showScreen('status')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -678,7 +678,7 @@ function dispatchAmbulance() {
 function toggleSiren() {
   const btn = document.getElementById('sirenBtn');
   btn.classList.toggle('on');
-  btn.textContent = btn.classList.contains('on') ? 'Siren Active' : 'Siren Off';
+  document.getElementById('sirenLabel').textContent = btn.classList.contains('on') ? 'Siren Active' : 'Siren Off';
 }
 </script>
 </body>
